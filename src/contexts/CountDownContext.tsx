@@ -22,7 +22,7 @@ export const CountDownContext = createContext({} as CountDownContextData)
 export function CountDownContextProvider({ children }: CountDownContextProvidertData) {
 
     const { startNewChallenge } = useContext(ChallengesContext);
-    let tempo = 0.05;
+    let tempo = 30;
     const [time, setTime] = useState(tempo * 60);
     const [active, setActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
