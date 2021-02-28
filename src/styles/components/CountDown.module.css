@@ -45,18 +45,21 @@
   font-size: 1.25rem;
   font-weight: 600;
 }
-.countDownButton:hover{
+.countDownButton:not(:disabled):hover {
   background: var(--blue-dark);
-
 }
-.countDownButtonCancel{
+.countDownButton:disabled {
+  background: var(--white);
+  color: var(--title);
+  cursor: not-allowed;
+}
+.countDownButtonCancel {
   background-color: var(--white) !important;
-  color: var(--red) !important;
+  color: var(--title) !important;
   border: 1px solid var(--red);
 }
-.countDownButtonCancel:hover{
+.countDownButtonCancel:hover {
   background-color: var(--red) !important;
   color: var(--white) !important;
-  border:0px;
-
+  border: 0px;
 }
